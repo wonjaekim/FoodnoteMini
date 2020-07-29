@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">FoodnoteMini</string>
+
+
+
+    <string name="price_category">가격대</string>
+    <string name="price_category_hint">가격대를 선택해주세요.</string>
+    <string name="service_facilities">서비스 및 시설</string>
+    <string name="service_facilities_hint">가능한 서비스를 선택해주세요.</string>
+    <string name="situation">상황</string>
+    <string name="situation_hint">적당한 상황을 추천해주세요.</string>
+
+    <string name="add_info1">가격대는 어떠한가요?</string>
+    <string name="add_info2">어떠한 서비스가 가능한가요?</string>
+    <string name="add_info3">어떤 상황에서 방문하는 것을 추천하나요?</string>
+
+    <string name="q_contition1">어떠한 가격대를 원하세요?</string>
+    <string name="q_contition2">어떠한 서비스가 필요한가요?</string>
+    <string name="q_contition3">어떤 상황에서 방문하실려고 하나요?</string>
+    <string name="q_contition_reset">선택초기화</string>
+
+    <string name="search">검색</string>
+
+    <string name="parking_lot">주차장</string>
+    <string name="valet_parking">발렛파킹</string>
+    <string name="playground">놀이터</string>
+    <string name="room">룸</string>
+    <string name="terrace">야외테라스</string>
+    <string name="packing">포장가능</string>
+    <string name="delivery">배달</string>
+    <string name="round_the_clock">24시간</string>
+    <string name="refill">무한리필</string>
+
+    <string name="lunch">점심식사</string>
+    <string name="dinner">저녁식사</string>
+    <string name="drink">술자리</string>
+    <string name="date">데이트</string>
+    <string name="for_meeting">모임</string>
+    <string name="family">가족모임</string>
+    <string name="with_children">아이와 함께</string>
+    <string name="alone">혼자</string>
+    <string name="hot_place">핫플레이스</string>
+    <string name="brunch">브런치</string>
+    <string name="wellbeing">몸보신</string>
+    <string name="abroad_food">외국음식</string>
+    <string name="at_tv">TV나온집</string>
+    <string name="for_service">접대</string>
+    <string name="with_friend">친구와</string>
+
+
+</resources>

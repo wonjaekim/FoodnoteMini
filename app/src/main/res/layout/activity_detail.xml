@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wjk.foodnotemini.DetailActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_above="@+id/bottom"
+        android:layout_centerHorizontal="true"/>
+
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/button_close"
+        />
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="194dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:paddingTop="19dp"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_round_corner">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/btn_detail"
+            android:ellipsize="end"
+            android:textSize="20sp"
+            android:textColor="#008de5"
+            android:textStyle="bold"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="3sp"
+            android:maxLines="1"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/btn_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="8dp"
+            android:text="자세히 보기"
+            android:textSize="12sp"
+            android:textColor="#ffffff"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="28.8sp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/button_detail"
+            />
+
+        <RelativeLayout
+            android:id="@+id/adr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/title">
+            
+            <LinearLayout
+                android:id="@+id/addr_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="44dp"
+                android:orientation="horizontal">
+                
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/icon_location"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/addr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="12.5sp"
+                    android:textStyle="bold"
+                    android:textColor="#2d2d2d"
+                    android:text=""
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/addr_area"
+                android:layout_marginLeft="6dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/icon_copy"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="12.2sp"
+                    android:textColor="#008de5"
+                    android:text="복사"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/phone_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/adr"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/icon_call"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:textSize="12.5sp"
+                android:textStyle="bold"
+                android:textColor="#2d2d2d"
+                android:text=""
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/phone_area"
+            android:layout_marginTop="10dp"
+            android:textSize="11.5sp"
+            android:textColor="#505050"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="3sp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:text=""/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

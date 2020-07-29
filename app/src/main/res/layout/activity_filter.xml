@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wjk.foodnotemini.FilterActivity">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:src="@drawable/title_btn_close_n" />
+
+        <TextView
+            android:id="@+id/act_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="추가 정보"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_con_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="9dp"
+            android:padding="10dp"
+            android:text="완료"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar"
+        android:orientation="vertical">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="#FEFEFE">
+
+            <ImageView
+                android:id="@+id/info_ic"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/post_detail_ic_place" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/info_ic"
+                android:text="@string/q_contition2"
+                android:textColor="#2a2a2a"
+                android:textSize="13sp" />
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/btn_reset_place"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="12dp"-->
+            <!--android:paddingTop="6dp"-->
+            <!--android:paddingBottom="6dp"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:background="@drawable/button_reset">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/q_contition_reset"-->
+            <!--android:textColor="#707070"-->
+            <!--android:textSize="11sp" />-->
+
+            <!--</RelativeLayout>-->
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#d6d6d6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#fafafa"
+            android:padding="15dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:id="@+id/area_service1"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n">
+
+                    <TextView
+                        android:id="@+id/service1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/parking_lot"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/area_service2"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n">
+
+                    <TextView
+                        android:id="@+id/service2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/valet_parking"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"
+                        />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/area_service3"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n">
+
+                    <TextView
+                        android:id="@+id/service3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/playground"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/area_service4"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/service4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/room"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/area_service5"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/service5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/terrace"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/area_service6"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/service6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/packing"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/area_service7"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/service7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/delivery"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/area_service8"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/service8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/round_the_clock"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/area_service9"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/service9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/refill"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#d6d6d6" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="#FEFEFE">
+
+            <ImageView
+                android:id="@+id/place_ic"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/post_detail_ic_info" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/place_ic"
+                android:text="@string/q_contition3"
+                android:textColor="#2a2a2a"
+                android:textSize="13sp" />
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/btn_reset_info"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="12dp"-->
+            <!--android:paddingTop="6dp"-->
+            <!--android:paddingBottom="6dp"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:background="@drawable/button_reset">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/q_contition_reset"-->
+            <!--android:textColor="#707070"-->
+            <!--android:textSize="11sp" />-->
+
+            <!--</RelativeLayout>-->
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#d6d6d6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#fafafa"
+            android:padding="15dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:id="@+id/area_situation1"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/situation1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/lunch"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/area_situation2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/situation2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/dinner"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/area_situation3"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/situation3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/drink"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/area_situation4"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/situation4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/date"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/area_situation5"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/situation5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/for_meeting"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/area_situation6"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/situation6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/family"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/area_situation7"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/situation7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/with_children"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/area_situation8"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/situation8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/alone"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/area_situation9"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/situation9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/hot_place"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/area_situation10"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/situation10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/brunch"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/area_situation11"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/situation11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/wellbeing"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/area_situation12"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/situation12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/abroad_food"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/area_situation13"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/situation13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/at_tv"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/area_situation14"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/situation14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/for_service"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/area_situation15"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp">
+
+                    <TextView
+                        android:id="@+id/situation15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/with_friend"
+                        android:textColor="#2a2a2a"
+                        android:textSize="13sp"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#d6d6d6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#fefefe"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wjk.foodnotemini.MainActivity"
+    android:background="#008de5">
+
+
+
+    <ImageView
+        android:id="@+id/title"
+        android:layout_width="240dp"
+        android:layout_height="43dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/img_title"
+        android:scaleType="centerCrop"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="230dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/img_bg"/>
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/btn_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="1">
+
+        <ImageView
+            android:id="@+id/location_btn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/btn_gps_n"
+            android:layout_margin="15dp"
+            />
+
+
+        <ImageView
+            android:id="@+id/filter_btn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/btn_filter_off"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"
+            />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/start_area"
+            android:layout_marginBottom="35dp"
+            android:text="스마트하게 주변의 맛집을 추천해드립니다."/>
+
+
+
+        <com.h6ah4i.android.materialshadowninepatch.MaterialShadowContainerView
+            android:id="@+id/start_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            style="@style/ms9_DefaultShadowStyle"
+            app:ms9_shadowTranslationZ="2dp"
+            app:ms9_shadowElevation="4dp"
+            >
+
+
+
+                <TextView
+                    android:id="@+id/start"
+                    android:layout_width="220dp"
+                    android:layout_height="63dp"
+                    android:gravity="center"
+                    android:textSize="23sp"
+                    android:textColor="#00509a"
+                    android:text="뭐먹지?"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button_start"
+                    />
+
+
+        </com.h6ah4i.android.materialshadowninepatch.MaterialShadowContainerView>
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
